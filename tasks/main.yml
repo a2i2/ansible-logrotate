@@ -2,8 +2,8 @@
 - name: 'Copy the logrotate template to /etc/logrotate.d'
   tags: 'logrotate'
   sudo: 'yes'
-	template: >
-		src=templates/logrotate_config.j2
-		dest=/etc/logrotate.d/{{ logrotate_conf_name }}
-		owner=root
-		group=root
+  template: >
+    src=templates/logrotate_config.j2
+    dest=/etc/logrotate.d/{{ logrotate_conf_name }}
+    owner=root
+    group=root
