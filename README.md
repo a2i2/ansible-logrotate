@@ -18,8 +18,9 @@ The default variables are as follows:
     logrotate_log_extension:      'log'                     # File extension for log files.
     logrotate_ignore_empty:       'yes'                     # Whether to ignore empty log errors.
     logrotate_ignore_missing:     'yes'                     # Whether to ignore missing log errors.
-    logrotate_rotate_frequency:   'daily'                   # Frequency of rotation. Valid values are 'daily', 'monthly', 'yearly'.
+    logrotate_rotate_frequency:   'monthly'                 # Frequency of rotation. Valid values are 'daily', 'monthly', 'yearly'.
     logrotate_rotate_count:       7                         # How many logs to rotate before the oldest one is deleted.
+    logrotate_rotate_size:        '100M'                    # If logs reach this size, they will be rotated. Takes precedence over logrotate_rotate_frequency.
     logrotate_use_date_extension: 'yes'                     # Whether to append the date to rotated logs. If false, a number is used instead.
     logrotate_user:               '{{ ansible_ssh_user }}'  # Owner of rotated logs files.
     logrotate_user_group:         '{{ ansible_ssh_user }}'  # Group of rotated log files.
@@ -35,6 +36,7 @@ The default variables are as follows:
           logrotate_log_dir:          '{{ deployment_user_home}}/log'
           logrotate_log_extension:    'txt'
           logrotate_rotate_frequency: 'daily'
+          logrotate_rotate_size:      '10M'
           logrotate_rotate_count:     7
 
 # License
