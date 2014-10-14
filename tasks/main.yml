@@ -1,5 +1,6 @@
 ---
 - name: 'Copy the logrotate template to /etc/logrotate.d'
+  tags: 'logrotate'
   sudo: 'yes'
 	template: >
 		src=templates/logrotate_config.j2
