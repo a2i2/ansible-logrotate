@@ -4,8 +4,9 @@
     size {{ logrotate_rotate_size }}
     {% if logrotate_compress is true %}
        compress
-    {% if logrotate_delay_compress is true %}
-        delaycompress
+        {% if logrotate_delay_compress is true %}
+            delaycompress
+        {% endif %}
     {% endif %}
     {% if logrotate_ignore_missing is true %}
         missingok
