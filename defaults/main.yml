@@ -9,7 +9,7 @@ logrotate_ignore_empty:       'yes'
 logrotate_ignore_missing:     'yes'
 logrotate_rotate_frequency:   'monthly'
 logrotate_rotate_count:       7
-logrotate_size:               '100M'
+logrotate_rotate_size:        '100M'
 logrotate_use_date_extension: 'yes'
 logrotate_user:               '{{ ansible_ssh_user }}'
 logrotate_user_group:         '{{ ansible_ssh_user }}'
